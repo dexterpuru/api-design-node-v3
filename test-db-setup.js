@@ -16,6 +16,8 @@ global.newId = () => {
   return mongoose.Types.ObjectId()
 }
 
+jest.setTimeout(10000)
+
 const remove = collection =>
   new Promise((resolve, reject) => {
     collection.remove(err => {
